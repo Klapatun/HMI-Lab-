@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2020-02-27T16:55:13
+# Project created by QtCreator 2020-02-28T12:54:34
 #
 #-------------------------------------------------
 
@@ -26,12 +26,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    inputdialog_klapatun_demin.cpp
+    inputdialog_klapatun_demin.cpp \
+    startdialog_klapatun_demin.cpp
 
 HEADERS += \
         mainwindow.h \
-    startdialog_klapatun_demin.h \
-    inputdialog_klapatun_demin.h
+    inputdialog_klapatun_demin.h \
+    startdialog_klapatun_demin.h
 
 FORMS += \
         mainwindow.ui

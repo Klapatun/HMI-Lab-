@@ -1,10 +1,16 @@
 #include "inputdialog_klapatun_demin.h"
+#include "startdialog_klapatun_demin.h"
 #include <QLabel>
 #include <QLayout>
 #include <QString>
 #include <QPushButton>
+#include <QLineEdit>
 
-InputDialog_Klapatun_Demin::InputDialog_Klapatun_Demin(QWidget *pwgt): QDialog(pwgt)
+#include <QtGui>
+#include <QGridLayout>
+
+
+InputDialog_Klapatun_Demin::InputDialog_Klapatun_Demin(QWidget* pwgt) : QDialog(pwgt)
 {
     m_ptxtFirstName = new QLineEdit;
     m_ptxtLastName = new QLineEdit;
@@ -18,8 +24,8 @@ InputDialog_Klapatun_Demin::InputDialog_Klapatun_Demin(QWidget *pwgt): QDialog(p
     QPushButton* pcmdOk = new QPushButton("&Ok");
     QPushButton* pcmdCancel = new QPushButton("&Cancel");
 
-    connect(pcmdOk,SIGNAL(clicked()),SLOT(accept()));
-    connect(pcmdCancel,SIGNAL(clicked()),SLOT(reject()));
+    connect(pcmdOk, SIGNAL(clicked()), SLOT(accept()));
+    connect(pcmdCancel, SIGNAL(clicked()), SLOT(reject()));
 
     QGridLayout* ptopLayout = new QGridLayout;
     ptopLayout->addWidget(plblFirstName,0,0);
@@ -34,4 +40,9 @@ InputDialog_Klapatun_Demin::InputDialog_Klapatun_Demin(QWidget *pwgt): QDialog(p
 QString InputDialog_Klapatun_Demin::firstName() const
 {
     return m_ptxtFirstName->text();
+}
+
+QString InputDialog_Klapatun_Demin::lastName() const
+{
+    return m_ptxtLastName->text();
 }
